@@ -23,7 +23,8 @@ public class MyUserDetailsService implements UserDetailsService {
 
         User user = repo.findByUsername(username); // It will go to DB and find if the user exist.
 
-        List<GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority("ROLE_"+user.getRole().name()));
+        List<GrantedAuthority> authorities = List.of(  // It will fetch the role of the user from DB.
+                new SimpleGrantedAuthority("ROLE_"+user.getRole().name()));
 
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),

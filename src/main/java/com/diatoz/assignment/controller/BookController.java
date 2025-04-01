@@ -3,8 +3,6 @@ package com.diatoz.assignment.controller;
 import com.diatoz.assignment.entity.Book;
 import com.diatoz.assignment.service.BookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

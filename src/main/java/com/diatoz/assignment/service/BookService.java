@@ -3,8 +3,6 @@ package com.diatoz.assignment.service;
 import com.diatoz.assignment.entity.Book;
 import com.diatoz.assignment.repository.BookRepo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +14,6 @@ public class BookService {
 
     private final BookRepo bookRepository;
 
-//    @PreAuthorize("hasAnyRole('ADMIN', 'LIBRARIAN')")
     public Book addBook(Book book) {
         return bookRepository.save(book);
     }
